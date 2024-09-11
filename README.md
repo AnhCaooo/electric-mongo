@@ -10,18 +10,18 @@ A database for electric application
 ### Access to MongoDB
 In order to access to MongoDB, you can use the following command
 ```bash
-    docker exec -it <mongodb-docker-image> mongosh -u <username> -p <password>
+docker exec -it <mongodb-docker-image> mongosh -u <username> -p <password>
 ```
 
 ### Navigate to specific database - collection
 1. After access to MongoDB successfully, navigate to specific database
 ```bash
-    use <database-name>
+use <database-name>
 ```    
 
 2. If you want to navigate to a specific collection inside database
 ```bash
-    use <collection-name>
+use <collection-name>
 ```
 
 ### More options
