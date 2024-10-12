@@ -61,8 +61,8 @@ Push image to Docker hub
 docker push anhcaoo/<image-name>:<tagged-version-number> 
 ```
 
-## Run/ intialize Docker image 
+## Run Docker image locally
 ```bash
-docker run --name electric-mongo -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=<user> -e MONGO_INITDB_ROOT_PASSWORD=<pass> <repository_name>:<image_version>
+docker run --name electric-mongo -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=<user> -e MONGO_INITDB_ROOT_PASSWORD=<pass> <repository_name>:<tag-version>
 ```
 
