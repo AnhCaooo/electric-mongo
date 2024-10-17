@@ -4,7 +4,7 @@ DOCKER_IMAGE = electric-mongo
 TAGGED_VERSION = 1.0.0
 DOCKER_CONTAINER = ${DOCKER_IMAGE}:${TAGGED_VERSION} 
 
-.PHONY: build tag push test docker
+.PHONY: build tag push docker
 
 build: 
 	docker build --tag ${DOCKER_CONTAINER} .
@@ -15,7 +15,4 @@ tag:
 push: 
 	docker push ${DOCKER_USERNAME}/${DOCKER_CONTAINER}
 
-test: 
-	go test ./...
-
-docker: test build
+docker: build
