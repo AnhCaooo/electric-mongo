@@ -50,15 +50,21 @@ make docker
 ```
 
 #### Step 2
+**Note**: firstly need to log in Docker (only in case you have not logged in)
+
+```bash
+docker login -u "<docker_username>" -p "<docker_password>" docker.io
+```
+
 Tag image
 ```bash
-docker tag <image-name>:<number-version> anhcaoo/<image-name>:<tagged-version-number> 
+docker tag <image-name>:<number-version> <docker_namer>/<image-name>:<tagged-version-number> 
 ```
 
 #### Step 3
 Push image to Docker hub
 ```bash
-docker push anhcaoo/<image-name>:<tagged-version-number> 
+docker push <docker_namer>/<image-name>:<tagged-version-number> 
 ```
 
 ## Run Docker image locally
