@@ -1,10 +1,9 @@
 FROM --platform=linux/amd64 mongo:8.0.0-rc20-noble
 
+LABEL maintainer="Anh Cao <anhcao4922@gmail.com>"
+
 # Expose the MongoDB port (default: 27017)
 EXPOSE 27017
-
-# Create a volume for MongoDB data
-VOLUME /data/db
 
 # Start MongoDB
 CMD ["mongod"]
